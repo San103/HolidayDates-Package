@@ -4,19 +4,22 @@ namespace San103\Phpholidayapi;
 use GuzzleHttp\Client;
 class holiday{
     protected $api;
-    protected $apiKey;
-    // private static int $gapi = ;
+    protected $year;
+    protected $apiKey = 'AIzaSyCxa_wfS4ITyuGgbPh4P4SQjQI942bHGx0';
     public function countryCode($code = 'philippines'){
        $this->api = "https://www.googleapis.com/calendar/v3/calendars/en.{$code}%23holiday%40group.v.calendar.google.com/events?key=";
         return $this;
     }
 
-    public function apiKey($key = 'AIzaSyCxa_wfS4ITyuGgbPh4P4SQjQI942bHGx0'){
+    public function apiKey($key){
        $this->apiKey = $key;
        return $this;
     }
 
-   
+    public function year($y = date('Y')){
+        $this->year = $y;
+        return $this;
+    }
 
     public function result(){
 
@@ -26,13 +29,15 @@ class holiday{
 
                 if ($response->getStatusCode() == 200) {
 
-                    // $toJson = collect($response->json()['items']);
                     $jsonData = json_decode($response->getBody(), true);
 
                     $filteredData = array_filter($jsonData['items'], function ($item) {
+
                         return $item['description'] === 'Public holiday'
-                            && date('Y', strtotime($item['start']['date'])) === date('Y')
+
+                            && date('Y', strtotime($item['start']['date'])) === $this->year
                             && $item['status'] === 'confirmed';
+
                     });
 
                     $mappedData = array_map(function ($item) {
@@ -40,8 +45,7 @@ class holiday{
                             'id' => $item['id'],
                             'title' => $item['summary'],
                             'description' => $item['description'],
-                            'start' => $item['start'],
-                            'end' => $item['end'],
+                            'date' => $item['start'],
                         ];
                     }, $filteredData);
 
