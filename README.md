@@ -1,5 +1,5 @@
-# Php-Holiday-API
-An API for php holiday date based on `Google Calendar API`
+# Php-Holiday-Package
+A package for php/ laravel/ CI holiday date based on `Google Calendar API`
 
     composer require san103/php-holiday-api
 
