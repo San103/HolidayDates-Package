@@ -1,6 +1,7 @@
 {
     "name": "san103/php-holiday-api",
     "description": "An holiday API for php",
+    "license": "MIT",
     "authors": [
         {
             "name": "San103",
@@ -9,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "San103\\Testsan\\": "src/"
+            "San103\\Phpholidayapi\\": "src/"
         }
     },
     "minimum-stability": "dev",
