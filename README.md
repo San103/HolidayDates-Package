@@ -48,7 +48,7 @@ year('2022')
 result(); 
 ```
 
-- [x] Example usage in Laravel 10
+- [x] Example usage in php
 ```
 use San103\Phpholidayapi\HolidayClient;
 
@@ -62,6 +62,29 @@ public function index(){
       
     }
 ```
+
+- [x] Example usage in Laravel 10
+```
+use San103\Phpholidayapi\HolidayClientLaravel;
+
+public function index(){
+
+        $api = new HolidayClientLaravel();
+        return $api
+                    ->countryCode('uk') 
+                    ->year('2023') 
+                    ->result();
+      
+    }
+```
+<h3>Special Feature for Laravel 10</h3>
+
+- Cache
+  
+```
+ return Cache::remember(date('Y'), now()->addMonth(), function () use ($http) {
+```
+change the `now()->addMonth()` to set expiration of the cache
 
 > [!NOTE]
 > You may also provide your own Api key from [Google API](https://developers.google.com/calendar/api/guides/overview).
