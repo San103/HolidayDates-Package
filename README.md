@@ -48,7 +48,7 @@ year('2022')
 result(); 
 ```
 
-- [x] Code
+- [x] Example usage
 ```
 use San103\Phpholidayapi\HolidayClient;
 
