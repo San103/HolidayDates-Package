@@ -1,0 +1,17 @@
+{
+    "name": "san103/php-holiday-api",
+    "description": "An holiday API for php",
+    "authors": [
+        {
+            "name": "San103",
+            "email": "palbanjessan16@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "San103\\Testsan\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
