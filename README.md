@@ -25,9 +25,10 @@ composer require guzzlehttp/guzzle:^7.0
 ```
 apiKey('your-api-key')
 ```
+<h2> Define package </h2>
 
 ```
-namespace San103/SampleApp
+namespace App/YourApp
 
 use San103\Phpholidayapi\HolidayClient;
 ```
@@ -61,11 +62,58 @@ public function index(){
         $api = new HolidayClient();
         return $api
                     ->countryCode('uk') 
-                    ->year('2022') 
+                    ->year('2023') 
                     ->result();
       
     }
 ```
+<h2>Output</h2>
 
+```
+"
+{
+    "21":{
+        "id":"20230101_i536",
+        "title":"New Year\'s Day",
+        "description":"Public holiday",
+        "date":{"date":"2023-01-01"}},
+    "23":{
+        "id":"20230225_qh5n",
+        "title":"People Power Anniversary",
+        "description":"Public holiday",
+        "date":{"date":"2023-02-25"}},
+    "24":{
+        "id":"20230406_hvi",
+        "title":"Maundy Thursday",
+        "description":"Public holiday",
+        "date":{"date":"2023-04-06"}},
+    "25":{
+        "id":"20230407_fv",
+        "title":"Good Friday",
+        "description":"Public holiday",
+        "date":{"date":"2023-04-07"}},
+    "26":{
+        "id":"20230408_6v",
+        "title":"Black Saturday",
+        "description":"Public holiday",
+        "date":{"date":"2023-04-08"}},
+    "28":{
+        "id":"20230501_on",
+        "title":"Labor Day",
+        "description":"Public holiday",
+        "date":{"date":"2023-05-01"}},
+    "29":{
+        "id":"20230612_kq",
+        "title":"Independence Day",
+        "description":"Public holiday",
+        "date":{"date":"2023-06-12"}},
+    "30":{
+        "id":"20230821_p0c",
+        "title":"Ninoy Aquino Day",
+        "description":"Public holiday",
+        "date":{"date":"2023-08-21"}},
+    ...
+"
+```
 > [!IMPORTANT]
 > This return json code Thank You!
