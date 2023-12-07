@@ -123,4 +123,4 @@ public function index(){
 "
 ```
 > [!IMPORTANT]
-> This return json code Thank You!
+> Thank You! Buy me a coffe
