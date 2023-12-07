@@ -19,12 +19,7 @@ composer require guzzlehttp/guzzle:^7.0
 
 # Basic Usage
 
-> [!NOTE]
-> You can provide your own Api key from [Google API](https://developers.google.com/calendar/api/guides/overview).
->  just enable the Calendar Api and generate key
-```
-apiKey('your-api-key')
-```
+
 <h2> Define package </h2>
 
 ```
@@ -67,6 +62,14 @@ public function index(){
       
     }
 ```
+
+> [!NOTE]
+> You may also provide your own Api key from [Google API](https://developers.google.com/calendar/api/guides/overview).
+>  just enable the Calendar Api and generate key
+```
+apiKey('your-api-key')
+```
+
 <h2>Output</h2>
 
 ```
