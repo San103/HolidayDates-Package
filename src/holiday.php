@@ -5,7 +5,11 @@ use GuzzleHttp\Client;
 class holiday{
     protected $api;
     protected $year;
-    protected $apiKey = 'AIzaSyCxa_wfS4ITyuGgbPh4P4SQjQI942bHGx0';
+    protected $apiKey;
+    public function __construct(){
+        $this->year = date('Y');
+        $this->apiKey = 'AIzaSyCxa_wfS4ITyuGgbPh4P4SQjQI942bHGx0';
+    }
     public function countryCode($code = 'philippines'){
        $this->api = "https://www.googleapis.com/calendar/v3/calendars/en.{$code}%23holiday%40group.v.calendar.google.com/events?key=";
         return $this;
@@ -16,7 +20,7 @@ class holiday{
        return $this;
     }
 
-    public function year($y = date('Y')){
+    public function year($y){
         $this->year = $y;
         return $this;
     }
