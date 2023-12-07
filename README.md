@@ -50,6 +50,7 @@ result();
 
 - [x] Example usage in php
 ```
+require 'vendor/autoload.php';
 use San103\Phpholidayapi\HolidayClient;
 
 public function index(){
