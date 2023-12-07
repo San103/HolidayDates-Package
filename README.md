@@ -24,26 +24,29 @@ composer require guzzlehttp/guzzle:^7.0
 >  just enable the Calendar Api and generate key
 
 ```
-    use San103\Phpholidayapi\HolidayClient;
+namespace San103/SampleApp
+
+use San103\Phpholidayapi\HolidayClient;
 ```
 
 ```
-    $holiday = new HolidayClient();
+$holiday = new HolidayClient();
 ```
 
-- [x] Set your Country Code e.g uk for United Kindom, us for United State
+- [ ] Set your Country Code e.g uk for United Kindom, us for United State `default sets to Philippines`
 ```
 countryCode('uk')
 ```
 
-- [x] Set what year you want to display holiday , default is set to current year
+- [ ] Set Year you want to display the holiday dates , `default is set to current year which is 2023`
 ```
 year('2022')
 ```
 
-- [x] This must define in last chaining.
+> [!CAUTION]
+> > The `result()` must define in last chain.
 ```
-result();
+result(); 
 ```
 
 - [x] Code
@@ -60,3 +63,6 @@ public function index(){
       
     }
 ```
+
+> [!IMPORTANT]
+> This return json code Thank You!
