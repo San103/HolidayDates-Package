@@ -22,6 +22,9 @@ composer require guzzlehttp/guzzle:^7.0
 > [!NOTE]
 > You can provide your own Api key from [Google API](https://developers.google.com/calendar/api/guides/overview).
 >  just enable the Calendar Api and generate key
+```
+apiKey('your-api-key')
+```
 
 ```
 namespace San103/SampleApp
