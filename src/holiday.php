@@ -29,10 +29,6 @@ class holiday{
                     // $toJson = collect($response->json()['items']);
                     $jsonData = json_decode($response->getBody(), true);
 
-                    // $arrayFilter = $toJson->filter(function ($item, $key) {
-                    //     return $item['description'] === 'Public holiday' && date('Y', strtotime($item['start']['date'])) === date('Y') && $item['status'] === 'confirmed';
-                    // });
-
                     $filteredData = array_filter($jsonData['items'], function ($item) {
                         return $item['description'] === 'Public holiday'
                             && date('Y', strtotime($item['start']['date'])) === date('Y')
