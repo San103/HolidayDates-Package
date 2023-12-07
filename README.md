@@ -48,7 +48,7 @@ year('2022')
 result(); 
 ```
 
-- [x] Example usage
+- [x] Example usage in Laravel 10
 ```
 use San103\Phpholidayapi\HolidayClient;
 
