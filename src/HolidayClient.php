@@ -4,14 +4,16 @@ namespace San103\Phpholidayapi;
 use GuzzleHttp\Client;
 class HolidayClient{
     protected $api;
+
+    private $countryCode = 'philippines';
     protected $year;
     protected $apiKey;
     public function __construct(){
         $this->year = date('Y');
         $this->apiKey = 'AIzaSyCxa_wfS4ITyuGgbPh4P4SQjQI942bHGx0';
     }
-    public function countryCode($code = 'philippines'){
-       $this->api = "https://www.googleapis.com/calendar/v3/calendars/en.{$code}%23holiday%40group.v.calendar.google.com/events?key=";
+    public function countryCode($code){
+       $this->countryCode = $code;
         return $this;
     }
 
@@ -27,9 +29,12 @@ class HolidayClient{
 
     public function result(){
 
+        $cc = $this->countryCode;
+        $http = "https://www.googleapis.com/calendar/v3/calendars/en.{$cc}%23holiday%40group.v.calendar.google.com/events?key=";
+
         $client = new Client();
             try {
-                $response = $client->get($this->api . $this->apiKey);
+                $response = $client->get($http . $this->apiKey);
 
                 if ($response->getStatusCode() == 200) {
 
