@@ -2,7 +2,7 @@
 
 namespace San103\Phpholidayapi;
 use GuzzleHttp\Client;
-class holiday{
+class Holiday{
     protected $api;
     protected $year;
     protected $apiKey;
