@@ -126,4 +126,4 @@ apiKey('your-api-key')
 "
 ```
 > [!IMPORTANT]
-> Thank You! Buy me a coffe
+> Thank You! Give us a Star
