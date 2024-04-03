@@ -81,8 +81,7 @@ public function index(){
 <h3>Special Feature for Laravel 10</h3>
 
 - Install Cache 
-- Cache
-- wrap your code with this code
+- use the HolidayClientLaravel source
   
 ```
  return Cache::remember(date('Y'), now()->addMonth(), function () use ($http) {
