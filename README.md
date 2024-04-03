@@ -5,7 +5,7 @@ A package for php/ laravel/ CI holiday date based on `Google Calendar API`
 
 <h1>Prerequisites</h1>
 
-- [x] PHP 7.2.5 or higher
+- [x] PHP 8.0 or higher
 - [x] Composer
 - [x] Guzzlehttp/guzzle"
 
