@@ -54,8 +54,9 @@ class HolidayClientLaravel{
                             'id' => $item['id'],
                             'title' => $item['summary'],
                             'description' => $item['description'],
-                            'start' => $item['start'],
-                            'end' => $item['end'],
+                            'date' => $item['start'],
+                            // 'start' => $item['start'],
+                            // 'end' => $item['end'],
                         ];
                     });
 
