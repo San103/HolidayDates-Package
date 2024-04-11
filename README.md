@@ -32,12 +32,12 @@ use San103\Phpholidayapi\HolidayClient;
 $holiday = new HolidayClient();
 ```
 
-- [ ] Set your Country Code e.g uk for United Kindom, us for United State `default sets to Philippines`
+- [ ] (Optional) Set your Country Code e.g uk for United Kindom, us for United State `default sets to Philippines`
 ```
 countryCode('uk')
 ```
 
-- [ ] Set Year you want to display the holiday dates , `default is set to current year which is 2023`
+- [ ] (Optional) Set Year you want to display the holiday dates , `default is set to current year which is 2023`
 ```
 year('2022')
 ```
