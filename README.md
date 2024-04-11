@@ -42,7 +42,7 @@ countryCode('uk')
 year('2022')
 ```
 
-> [!CAUTION]
+> [!IMPORTANT]
 > > The `result()` must define in last chain.
 ```
 result(); 
