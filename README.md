@@ -151,7 +151,7 @@ apiKey('your-api-key')
 "
 ```
 > [!IMPORTANT]
-> Give as a star mate! Thank you and GodBless
+> If you make this useful give us a star! Thank you and GodBless
 ## License
 
 The package is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
